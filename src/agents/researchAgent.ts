@@ -2,6 +2,7 @@ import { GoogleGenAI } from '@google/genai';
 import { config } from '../config';
 import { ResearchBrief } from '../types';
 import { getResearchPrompt } from '../prompts/researchPrompt';
+import { withRetry } from '../utils/retryHelper';
 import * as fs from 'fs';
 
 export async function runResearchAgent(
@@ -24,13 +25,15 @@ export async function runResearchAgent(
   const prompt = getResearchPrompt(topic, service, pillar, aboutMeText, historyTopics);
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: prompt,
-      config: {
-        tools: [{ googleSearch: {} }]
-      }
-    });
+    const response = await withRetry(() =>
+      ai.models.generateContent({
+        model: 'gemini-2.5-flash',
+        contents: prompt,
+        config: {
+          tools: [{ googleSearch: {} }]
+        }
+      })
+    );
 
     const text = response.text;
     if (!text) {

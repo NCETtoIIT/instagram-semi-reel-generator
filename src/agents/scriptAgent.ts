@@ -2,6 +2,7 @@ import { GoogleGenAI } from '@google/genai';
 import { config } from '../config';
 import { ResearchBrief, Script } from '../types';
 import { getScriptPrompt } from '../prompts/scriptPrompt';
+import { withRetry } from '../utils/retryHelper';
 import * as fs from 'fs';
 
 export async function runScriptAgent(brief: ResearchBrief): Promise<Script> {
@@ -17,13 +18,15 @@ export async function runScriptAgent(brief: ResearchBrief): Promise<Script> {
   const prompt = getScriptPrompt(brief, aboutMeText);
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: prompt,
-      config: {
-        responseMimeType: 'application/json'
-      }
-    });
+    const response = await withRetry(() =>
+      ai.models.generateContent({
+        model: 'gemini-2.5-flash',
+        contents: prompt,
+        config: {
+          responseMimeType: 'application/json'
+        }
+      })
+    );
 
     const text = response.text;
     if (!text) {
