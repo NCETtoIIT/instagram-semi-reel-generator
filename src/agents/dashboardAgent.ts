@@ -66,6 +66,15 @@ export async function runDashboardAgent(data: DashboardData): Promise<string> {
               <div class="prompt-text overlay-val" id="overlay-s${scene.sceneNumber}">${scene.overlay}</div>
             </div>
           </div>
+          <div class="scene-info-row">
+            <div class="info-label">Image Generation Prompt (Copy to Midjourney/Imagen)</div>
+            <div class="prompt-box">
+              <button class="btn-copy" onclick="copyText('image-prompt-s${scene.sceneNumber}', this)" title="Copy Image Prompt">
+                <svg viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+              </button>
+              <div class="prompt-text" id="image-prompt-s${scene.sceneNumber}">${scene.visual}</div>
+            </div>
+          </div>
           <div class="scene-info-row" style="margin-bottom: 0;">
             <div class="info-label">Animate Video Prompt (Copy to Kling/Runway)</div>
             <div class="prompt-box">
