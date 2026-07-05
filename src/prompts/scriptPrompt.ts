@@ -15,16 +15,29 @@ ${JSON.stringify(brief, null, 2)}
 
 ### SCRIPT REQUIREMENTS:
 1. **Total Scenes:** Exactly 6 scenes (approx. 3 seconds each).
-2. **Video Part A (Hook + Problem):** Scenes 1, 2, and 3. Must highlight the pain point, establish the hook, and use statistics/facts from the brief. Mood should represent frustration, urgency, or loss.
-3. **Video Part B (Solution + CTA):** Scenes 4, 5, and 6. Must introduce the solution (Ravi's service), show the results/proof, and provide a strong call-to-action (CTA) to DM a specific keyword. Mood should represent relief, success, or confidence.
-4. **Visual Descriptions:** For EACH scene, write a highly descriptive prompt for generating a vertical 9:16 AI image. Specify lighting (cinematic, neon accents), colors, composition, and subjects (frustrated Indian business owner, modern dashboard, etc.). Stick to the brand visual theme: Dark bg (#0A0A0A), neon blue/purple accents (#00D4FF / #7B2FFF), premium, clean, minimal. Do not use generic elements. Include Ravi's face photo if it fits (especially in Scene 6 CTA).
-5. **Voiceover Dialogue:** Written in natural, conversational Hinglish (Hindi written in Roman script mixed with English words).
+2. **Video Part A (Hook + Problem):** Scenes 1, 2, and 3.
+3. **Video Part B (Solution + CTA):** Scenes 4, 5, and 6.
+4. **Visual Style Rules (Must enforce for each scene's visual description):**
+   - **Background:** Dark mode (#0A0A0A near black or #1A1A2E dark navy).
+   - **Primary Accent:** Electric Blue #00D4FF (highlights, CTAs, success elements).
+   - **Secondary Accent:** Purple #7B2FFF (gradients, glows, decorative).
+   - **Style:** 3D rendered premium tech aesthetic (isometric icons, glowing devices, clean minimal composition with 1 focal point). No generic stock photos, clipart, or cheap cartoons.
+   
+5. **Scene-by-Scene Visual Flow (Follow this structure strictly for the visual prompts):**
+   - **Scene 1 (PROBLEM scene - Hook):** Dark room, orange tint (#FF6B35), stressed business owner, cluttered desk, phone notifications overflowing, red warning icons, dimly lit.
+   - **Scene 2 (PAIN scene):** Dark room, orange tint (#FF6B35), clock spinning rapidly, leads dropping or warning lights, red down arrows, high anxiety.
+   - **Scene 3 (TRANSITION scene):** Split screen contrast or transition, dull old manual way (orange tint) vs premium automated way (electric blue/green glow), competitor looking happy, growing graph.
+   - **Scene 4 (SOLUTION scene):** Clean room, electric blue neon glow (#00D4FF), organized dashboard on a glowing screen, smiling owner, bright professional lighting.
+   - **Scene 5 (PROOF/STATS scene):** Big bold numbers in green (#00FF88) glowing center screen on dark background, minimal text showing growth/savings (e.g. "37 hrs/week saved" or "0 missed messages").
+   - **Scene 6 (CTA scene):** Ravi's face/avatar, clean dark background, electric blue accents, "@ravi.digital.solutions" visible, with "DM 'AUTO' 🤖" text prominent.
+
+6. **Voiceover Dialogue:** Written in natural, conversational Hinglish (Hindi written in Roman script mixed with English words).
    - Use first-person perspective ("Main", "Maine", "Mera").
    - NEVER use corporate or technical jargon (do NOT say: "n8n", "API", "webhook", "React", "Next.js", "database", "workflow").
    - HAMESHA benefits/results bolna (time saved, money, leads, auto-replies).
    - NEVER say "Sir", "Madam", "We", "Our", or mention exact prices or phone numbers.
-6. **Text Overlay:** Clear, short overlay text on the screen for each scene (max 5-6 words).
-7. **Instagram Caption & Hashtags:** A compelling caption in Hinglish explaining the value proposition, listing key statistics, and ending with a DM CTA. Provide 5-8 relevant hashtags.
+7. **Text Overlay:** Clear, short overlay text on the screen for each scene (max 5-6 words).
+8. **Instagram Caption & Hashtags:** A compelling caption in Hinglish explaining the value proposition, listing key statistics, and ending with a DM CTA. Provide 5-8 relevant hashtags.
 
 Return your response in STRICT JSON format. Do not wrap it in anything other than markdown code block. The JSON must exactly match this TypeScript interface:
 
