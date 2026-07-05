@@ -16,6 +16,7 @@ export interface Scene {
   voiceover: string;
   overlay: string;
   mood: string;
+  videoPrompt: string;
 }
 
 export interface Script {

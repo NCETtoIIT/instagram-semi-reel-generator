@@ -1,7 +1,7 @@
 import { GoogleGenAI } from '@google/genai';
 import { config } from '../config';
 import { Script, ImageGenerationResult } from '../types';
-import { getImagenPrompt, getVideoPromptGenerationPrompt } from '../prompts/imagePrompt';
+import { getImagenPrompt } from '../prompts/imagePrompt';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -51,23 +51,10 @@ export async function runImageAgent(script: Script): Promise<ImageGenerationResu
       imagePath = ''; // Mark as empty/error
     }
 
-    // 2. Generate Image-to-Video Prompt using Gemini
-    console.log(`[Image Agent] Writing Image-to-Video prompt for Scene ${scene.sceneNumber}...`);
-    const videoPromptInput = getVideoPromptGenerationPrompt(scene.visual, scene.mood, scene.voiceover);
-    
-    let imageToVideoPrompt = '';
-    try {
-      const videoResponse = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: videoPromptInput,
-      });
-      imageToVideoPrompt = videoResponse.text?.trim() || '';
-    } catch (videoError) {
-      console.error(`[Image Agent] Failed to generate video prompt for Scene ${scene.sceneNumber}:`, videoError);
-      imageToVideoPrompt = `Starting from this image, animate the scene maintaining the ${scene.mood} mood.`;
-    }
+    // 2. Use the pre-generated Video Prompt from the script
+    const imageToVideoPrompt = scene.videoPrompt || `Starting from this image, animate the scene maintaining the ${scene.mood} mood.`;
 
-    // 3. Extract camera and motion details from generated prompt
+    // 3. Extract camera and motion details
     const camera = scene.part === 'A' ? 'Slow zoom in' : 'Slight pan / Static';
     const motion = scene.mood;
 
@@ -79,6 +66,9 @@ export async function runImageAgent(script: Script): Promise<ImageGenerationResu
       motion,
       duration: '8 seconds',
     });
+
+    // Sleep for 1 second between scenes to prevent rate-limiting on Imagen
+    await new Promise((resolve) => setTimeout(resolve, 1000));
   }
 
   console.log('[Image Agent] All images and video prompts generated.');

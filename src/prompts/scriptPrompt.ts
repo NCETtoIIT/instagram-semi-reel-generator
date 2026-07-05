@@ -37,7 +37,8 @@ ${JSON.stringify(brief, null, 2)}
    - HAMESHA benefits/results bolna (time saved, money, leads, auto-replies).
    - NEVER say "Sir", "Madam", "We", "Our", or mention exact prices or phone numbers.
 7. **Text Overlay:** Clear, short overlay text on the screen for each scene (max 5-6 words).
-8. **Instagram Caption & Hashtags:** A compelling caption in Hinglish explaining the value proposition, listing key statistics, and ending with a DM CTA. Provide 5-8 relevant hashtags.
+8. **Kling/Runway Video Prompt:** For EACH scene, generate a copy-paste ready video generation prompt in the \`videoPrompt\` field. The prompt must start with "Starting from this image..." or "Animate this static image..." and describe the camera motion (e.g. slow zoom, pan) and subject movement (typing, screen elements glowing) keeping it under 40-50 words. Ensure it maintains a premium tech aesthetic.
+9. **Instagram Caption & Hashtags:** A compelling caption in Hinglish explaining the value proposition, listing key statistics, and ending with a DM CTA. Provide 5-8 relevant hashtags.
 
 Return your response in STRICT JSON format. Do not wrap it in anything other than markdown code block. The JSON must exactly match this TypeScript interface:
 
@@ -49,6 +50,7 @@ interface Scene {
   voiceover: string;
   overlay: string;
   mood: string;
+  videoPrompt: string;
 }
 
 interface Script {

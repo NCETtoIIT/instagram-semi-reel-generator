@@ -39,7 +39,8 @@ async function testMock() {
         visual: "Stressed business owner looking at screen with 50 unread notifications, dark office environment with warm warning light, cinematic shot, 9:16",
         voiceover: "Har din 50+ customer messages aate hain aur reply karne mein ghanto waste hote hain...",
         overlay: "❌ Missed leads & messages daily",
-        mood: "frustration"
+        mood: "frustration",
+        videoPrompt: "Starting from this image, animate the scene with a slow zoom in on the stressed owner, while unread notification badges float gently in the air."
       },
       {
         sceneNumber: 2,
@@ -48,7 +49,8 @@ async function testMock() {
         visual: "Split screen: left side shows a clock spinning fast, right side shows a customer drop down chart, dark theme with red warning accents, 9:16",
         voiceover: "Ek statistical fact: 40% leads sirf late reply ki wajah se lose ho jaate hain.",
         overlay: "⏰ Late reply = 40% lost leads",
-        mood: "urgency"
+        mood: "urgency",
+        videoPrompt: "Starting from this image, animate the spinning clock on the left while the line graph on the right slowly declines with a subtle glowing pulse."
       },
       {
         sceneNumber: 3,
@@ -57,7 +59,8 @@ async function testMock() {
         visual: "Stressed business owner walking away from desk, dark office atmosphere, blue and red accent lights, 9:16",
         voiceover: "Agar manually follow up karoge to scale kab karoge?",
         overlay: "❌ Manual reply is expensive",
-        mood: "frustration"
+        mood: "frustration",
+        videoPrompt: "Starting from this image, animate the owner walking out of the frame while the neon blue/red accent lights flicker slowly."
       },
       {
         sceneNumber: 4,
@@ -66,7 +69,8 @@ async function testMock() {
         visual: "Same business owner looking relaxed, smiling at a clean desk, glowing neon blue chatbot dashboard on the screen, 9:16",
         voiceover: "Maine isko solve karne ke liye lagaya ek Custom AI Chatbot jo 30 seconds mein reply karta hai.",
         overlay: "✅ AI chatbot: 30-sec response",
-        mood: "relief"
+        mood: "relief",
+        videoPrompt: "Starting from this image, animate the screen displaying active chat nodes dynamically connecting, while the owner smiles and nods."
       },
       {
         sceneNumber: 5,
@@ -75,7 +79,8 @@ async function testMock() {
         visual: "Close up of a sleek, premium dark interface showing dashboard metrics: '200+ chats resolved, 0 missed', glowing electric blue neon, 9:16",
         voiceover: "Ye daily 200+ messages answer karta hai aur aapka 20+ hours/week bachata hai.",
         overlay: "📊 200+ chats daily | 24/7 active",
-        mood: "proof"
+        mood: "proof",
+        videoPrompt: "Starting from this image, animate the numeric counter digits increasing from 180 to 200 with glowing neon sparks."
       },
       {
         sceneNumber: 6,
@@ -84,7 +89,8 @@ async function testMock() {
         visual: "Ravi Kumar personal brand visual, confident pose facing camera, dark background with blue and purple neon rim lights, CTA overlay 'DM AUTO', 9:16",
         voiceover: "Apne business ko auto-pilot pe daalne ke liye direct DM karo keyword 'AUTO' aur main free audit bhejunga.",
         overlay: "DM 'AUTO' for Free Audit 🤖",
-        mood: "cta"
+        mood: "cta",
+        videoPrompt: "Starting from this image, animate the camera slowly tracking in, while the 'DM AUTO' text pulses with a neon purple glow."
       }
     ],
     caption: "Leads miss ho rahe hain? 🤦\n\nEk statistical fact: 40% leads sirf late reply ki wajah se lose ho jaate hain. Agar aap daily 4+ hours copy-paste message replies mein waste kar rahe ho, to business grow kab karoge?\n\nMaine setup kiya ek Custom AI Chatbot jo:\n✅ 30 seconds mein reply karta hai\n✅ Daily 200+ conversations automatic handle karta hai\n✅ Saves 20+ hours/week on support\n\nApna manual support system automated aur error-free banana chahte ho?\n\n↓ DM 'AUTO' right now aur main aapko ek free custom automation audit bhejunga! 🤖\n\n#AIAutomation #BusinessAutomation #AutomateYourBusiness #AIAgents #DigitalTransformation #BusinessGrowth",
