@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravi's Daily Reel Prep Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0A0A0A;
+      --card-bg: rgba(20, 20, 20, 0.6);
+      --card-border: rgba(255, 255, 255, 0.08);
+      
+      --accent-blue: #00D4FF;
+      --accent-purple: #7B2FFF;
+      --accent-green: #00FF88;
+      --accent-orange: #FF6B35;
+      
+      --text-main: #FFFFFF;
+      --text-muted: #B3B3B3;
+      --text-dark: #666666;
+      
+      --glow-blue: 0 0 15px rgba(0, 212, 255, 0.25);
+      --glow-purple: 0 0 15px rgba(123, 47, 255, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-bottom: 80px;
+    }
+
+    /* Background glow elements */
+    .glow-bg {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .glow-blue {
+      top: -200px;
+      right: -100px;
+      background-color: var(--accent-blue);
+    }
+    .glow-purple {
+      bottom: -200px;
+      left: -100px;
+      background-color: var(--accent-purple);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 40px;
+      padding-top: 20px;
+    }
+
+    .logo-area {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1.8rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 15px;
+    }
+
+    .meta-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .tag.service {
+      background-color: rgba(0, 212, 255, 0.1);
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+    }
+
+    .tag.pillar {
+      background-color: rgba(123, 47, 255, 0.1);
+      border-color: var(--accent-purple);
+      color: var(--accent-purple);
+    }
+
+    .tag.date {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+    }
+
+    /* Main Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    @media (min-width: 900px) {
+      .grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Glassmorphism Card */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    }
+
+    .card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .topic-box {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 4px solid var(--accent-blue);
+      padding: 16px;
+      border-radius: 0 12px 12px 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    /* Scenes Sections */
+    .part-header {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 30px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .part-header.part-a {
+      color: var(--accent-orange);
+    }
+
+    .part-header.part-b {
+      color: var(--accent-green);
+    }
+
+    .instruction-tip {
+      background: rgba(255, 107, 53, 0.05);
+      border: 1px dashed rgba(255, 107, 53, 0.2);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .part-b-tip {
+      background: rgba(0, 255, 136, 0.05);
+      border: 1px dashed rgba(0, 255, 136, 0.2);
+    }
+
+    /* Scene Grid item */
+    .scene-item {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .scene-item:last-child {
+      border-bottom: none;
+    }
+
+    @media (min-width: 600px) {
+      .scene-item {
+        grid-template-columns: 150px 1fr;
+      }
+    }
+
+    .scene-visual-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .scene-image-wrapper {
+      width: 130px;
+      height: 231px; /* 9:16 vertical ratio */
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      position: relative;
+      background-color: #141414;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .scene-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .scene-img-error {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: var(--text-dark);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .btn-download-img {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.75rem;
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .btn-download-img:hover {
+      text-decoration: underline;
+    }
+
+    .scene-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .scene-meta {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+    }
+
+    .scene-badge {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .scene-badge.idx {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      color: var(--text-main);
+    }
+
+    .scene-info-row {
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    .info-label {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .info-val.overlay-val {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #FFF;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .prompt-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 0.85rem;
+      position: relative;
+      margin-top: 8px;
+    }
+
+    .prompt-text {
+      padding-right: 40px;
+      font-family: inherit;
+    }
+
+    /* Copy Button */
+    .btn-copy {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .btn-copy:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-copy svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--text-main);
+    }
+
+    .btn-copy.success {
+      background: var(--accent-green);
+      border-color: var(--accent-green);
+    }
+
+    .btn-copy.success svg {
+      fill: #000;
+    }
+
+    /* Sidebar Content */
+    .sidebar-block {
+      margin-bottom: 24px;
+    }
+
+    .copy-block {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 0.9rem;
+      position: relative;
+      white-space: pre-wrap;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    .copy-block-btn {
+      float: right;
+      margin-top: -10px;
+      margin-right: -10px;
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+
+    .sidebar-block-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .list-stats {
+      list-style-type: none;
+    }
+
+    .list-stats li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .list-stats li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent-blue);
+      font-size: 1.2rem;
+      top: -2px;
+    }
+
+    /* History section */
+    .history-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .history-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .history-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.8rem;
+    }
+
+    .history-date {
+      color: var(--text-dark);
+      font-size: 0.75rem;
+      margin-bottom: 4px;
+    }
+
+    .history-topic {
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .history-service {
+      font-size: 0.7rem;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #1e1e1e;
+      border: 1px solid var(--accent-green);
+      color: var(--text-main);
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .toast-icon {
+      color: var(--accent-green);
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bg glow-blue"></div>
+  <div class="glow-bg glow-purple"></div>
+
+  <div class="container">
+    <header>
+      <div class="logo-area">RAVI KUMAR</div>
+      <div class="subtitle">Daily Reel Content Preparation System</div>
+      <div class="meta-tags">
+        <span class="tag date">{{DATE}}</span>
+        <span class="tag service">{{SERVICE}}</span>
+        <span class="tag pillar">{{PILLAR}}</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Main Content Column -->
+      <main>
+        <div class="card">
+          <div class="card-title">
+            <span>📝 Today's Generated Topic</span>
+          </div>
+          <div class="topic-box">
+            "{{TOPIC}}"
+          </div>
+
+          <div class="part-header part-a">
+            <span>🎬 VIDEO PART A: HOOK + PROBLEM</span>
+          </div>
+          <div class="instruction-tip">
+            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"/></svg>
+            <span><strong>Instructions:</strong> Scene 1, 2, and 3 images ko Kling AI ya Runway mein upload karein. Prompts paste karke 3-second separate clips banayein aur unhe merge karke Part A compile karein.</span>
+          </div>
+
+          <div class="scenes-list">
+            {{PART_A_SCENES}}
+          </div>
+
+          <div class="part-header part-b">
+            <span>🎬 VIDEO PART B: SOLUTION + CTA</span>
+          </div>
+          <div class="instruction-tip part-b-tip">
+            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"/></svg>
+            <span><strong>Instructions:</strong> Same process. Scene 4, 5, and 6 clips compile karein. Part A + Part B ko combine karein aur voiceover add karein.</span>
+          </div>
+
+          <div class="scenes-list">
+            {{PART_B_SCENES}}
+          </div>
+        </div>
+
+        <!-- History card -->
+        <div class="card">
+          <div class="card-title">
+            <span>📅 Topic History (Last 30 Days)</span>
+          </div>
+          <div class="history-list">
+            {{HISTORY_LOG}}
+          </div>
+        </div>
+      </main>
+
+      <!-- Sidebar Column -->
+      <aside>
+        <!-- Full Voiceover script card -->
+        <div class="card">
+          <div class="card-title">
+            <span>🗣️ Voiceover Script</span>
+          </div>
+          <div class="sidebar-block">
+            <div class="sidebar-block-title">Hinglish Voiceover script</div>
+            <div class="copy-block" id="vo-script">
+              <button class="btn-copy copy-block-btn" onclick="copyText('vo-script-content', this)" title="Copy Voiceover Script">
+                <svg viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+              </button>
+              <div id="vo-script-content">{{VOICEOVER}}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Production Cheat Sheet card -->
+        <div class="card">
+          <div class="card-title">
+            <span>📋 Full Production Sheet</span>
+          </div>
+          <div class="sidebar-block">
+            <div class="sidebar-block-title">Scene-by-scene prompts & text</div>
+            <div class="copy-block" id="production-sheet" style="max-height: 350px;">
+              <button class="btn-copy copy-block-btn" onclick="copyText('production-sheet-content', this)" title="Copy Full Production Sheet">
+                <svg viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+              </button>
+              <div id="production-sheet-content">{{PRODUCTION_SHEET}}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caption & Hashtags card -->
+        <div class="card">
+          <div class="card-title">
+            <span>📝 Social Copy</span>
+          </div>
+          <div class="sidebar-block">
+            <div class="sidebar-block-title">Instagram Caption</div>
+            <div class="copy-block" id="ig-caption">
+              <button class="btn-copy copy-block-btn" onclick="copyText('ig-caption-content', this)" title="Copy Caption">
+                <svg viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+              </button>
+              <div id="ig-caption-content">{{CAPTION}}</div>
+            </div>
+          </div>
+
+          <div class="sidebar-block">
+            <div class="sidebar-block-title">Hashtags</div>
+            <div class="copy-block" id="ig-tags" style="max-height: 100px;">
+              <button class="btn-copy copy-block-btn" onclick="copyText('ig-tags-content', this)" title="Copy Hashtags">
+                <svg viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+              </button>
+              <div id="ig-tags-content">{{HASHTAGS}}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Complete Research Card -->
+        <div class="card">
+          <div class="card-title">
+            <span>🔍 Complete Research Insights</span>
+          </div>
+          
+          <div class="sidebar-block" style="margin-bottom: 20px;">
+            <div class="sidebar-block-title">📊 Statistical Proof</div>
+            <ul class="list-stats">
+              {{STATS}}
+            </ul>
+          </div>
+          
+          <div class="sidebar-block" style="margin-bottom: 20px;">
+            <div class="sidebar-block-title">❌ Audience Pain Points</div>
+            <ul class="list-stats">
+              {{PAIN_POINTS}}
+            </ul>
+          </div>
+
+          <div class="sidebar-block" style="margin-bottom: 20px;">
+            <div class="sidebar-block-title">💡 Hooks Explored</div>
+            <ul class="list-stats">
+              {{HOOKS}}
+            </ul>
+          </div>
+
+          <div class="sidebar-block" style="margin-bottom: 0;">
+            <div class="sidebar-block-title">⚡ Psychological Trigger</div>
+            <div class="info-val" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; display: inline-block; border-left: 3px solid var(--accent-purple);">
+              {{PSYCH_TRIGGER}}
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <svg class="toast-icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <script>
+    function copyText(elementId, btnElement) {
+      const element = document.getElementById(elementId);
+      if (!element) return;
+      
+      const textToCopy = element.innerText || element.textContent;
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        // Success animation for button
+        btnElement.classList.add('success');
+        
+        // Toast notification
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+          btnElement.classList.remove('success');
+          toast.classList.remove('show');
+        }, 2000);
+      }).catch(err => {
+        console.error('Could not copy text: ', err);
+      });
+    }
+  </script>
+</body>
+</html>

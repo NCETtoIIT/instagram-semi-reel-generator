@@ -1,0 +1,632 @@
+[
+  {
+    "dayNumber": 1,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "5 Kaam Jo Har Business Ko Automate Karne Chahiye",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 2,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Website Se 3x Zyada Leads — Real Business Example",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 3,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "AI Receptionist Kaise Kaam Karta Hai — Live Demo",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 4,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Mobile-Friendly Website Kyun Zaroori — 60% Traffic Mobile Se",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 5,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "Ek Business Ne 37 Hours/Week Bachaye — Dekho Kaise",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 6,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "☕ Café Ki Branding Transformation — Before vs After",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 7,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "India Se Global Clients — Meri Freelancing Journey",
+    "pillar": "CONNECT"
+  },
+  {
+    "dayNumber": 8,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "Tumhare Competitors AI Use Kar Rahe Hain — Proof Dekho",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 9,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Website Jo Convert Karti Hai — Sirf Dikhti Nahi",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 10,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "AI Chatbot 200+ Conversations Daily — Bina Staff Ke",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 11,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "SEO Kya Hai — Google Pe Free Traffic Kaise Laayein",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 12,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "Response Time 4 Hours Se 30 Seconds — Automation Power",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 13,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "💇 Salon Ki Complete Branding — Logo Se Social Media Tak",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 14,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "3 Galtiyan Jo Maine Apni Journey Mein Ki — Seekho",
+    "pillar": "CONNECT"
+  },
+  {
+    "dayNumber": 15,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "Leads Miss Ho Rahe Hain? Ye 4 Automations Lagao",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 16,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Landing Page Se Sales Badhte Hain — Step by Step",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 17,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "30 Seconds Mein Har Lead Ka Reply — Automatically",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 18,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "E-commerce Website Se Online Selling — Complete Guide",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 19,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "Manual Kaam vs AI System — Side by Side Comparison",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 20,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "🦷 Dental Clinic Ki Branding — Pehle vs Ab",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 21,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Myth: AI Sirf Badi Companies Ke Liye Hai — FACT Check",
+    "pillar": "MYTH"
+  },
+  {
+    "dayNumber": 22,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "Manual Kaam Kitna Expensive Hai — Ye Numbers Dekho",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 23,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Portfolio Website Se International Clients Aate Hain",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 24,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "3 Signs Ki Tumhara Business AI Ready Hai",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 25,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Website + Automation = Complete Digital System",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 26,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "AI Agent Banane Mein Kitna Time — Honest Answer",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 27,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "🍔 Fast Food Chain Ki Social Media Graphics — Before vs After",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 28,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Freelancing Se Brand Tak — Mera Transformation",
+    "pillar": "CONNECT"
+  },
+  {
+    "dayNumber": 29,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "5 AI Tools Jo Har Business Owner Ko 2026 Mein Pata Hone Chahiye",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 30,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Website Aur Digital System Mein Farak Kya Hai",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 31,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "AI Email Follow-Up — Customer Kabhi Bhoolega Nahi",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 32,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Slow Website = Lost Customers — Speed Kaise Badhayein",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 33,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "Ek Clinic Ne Patient Booking 100% Automate Kiya",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 34,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "🏋️ Gym Ki Branding — Transformation Post Design",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 35,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Myth: Website Banana Bohot Expensive Hai — Reality Check",
+    "pillar": "MYTH"
+  },
+  {
+    "dayNumber": 36,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "Customer Support Automate Karo — 24/7 Bina Staff Ke",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 37,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Restaurant Website Se Online Orders 5x Badhe",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 38,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "CRM Automation — Har Lead Ka Status Track Hota Hai",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 39,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "5 Website Mistakes Jo Customers Bhaga Deti Hain",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 40,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "Data Entry 5 Hours Se 0 Minutes — Real Case Study",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 41,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "🏠 Real Estate Agency Ki Branding — Listing Templates",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 42,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Kya AI Tumhari Job Chheen Lega? — Mera Honest Take",
+    "pillar": "MYTH"
+  },
+  {
+    "dayNumber": 43,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "Invoice Automation — Payment Reminders Apne Aap Bhejta Hai",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 44,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Coaching Business Website — Students Khud Register Karte Hain",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 45,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "Social Media Auto-Posting System — Kaise Kaam Karta Hai",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 46,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Website Contact Form Se Lead Capture — Best Practices",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 47,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "ROI 5.8x in 14 Months — Automation Investment Worth Hai?",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 48,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "🎬 YouTube Channel Branding — Thumbnails Before vs After",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 49,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Ek Din Meri Zindagi Mein — Behind the Scenes",
+    "pillar": "CONNECT"
+  },
+  {
+    "dayNumber": 50,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "WhatsApp Business Automation — Auto-Reply Setup",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 51,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Doctor Ki Website Se Patient Trust 75% Badha",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 52,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "Appointment Booking Bot — Customer Choose Kare Calendar Set",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 53,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Dark Mode Websites Trend 2026 — Kaise Banayein",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 54,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "HR Automation — Hiring Process 3x Fast",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 55,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "🏪 Local Shop Ki Complete Brand Makeover",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 56,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Myth: Automation Se Personal Touch Khatam — Wrong!",
+    "pillar": "MYTH"
+  },
+  {
+    "dayNumber": 57,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "Lead Scoring Automation — Hot Leads Pehle Pehchaano",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 58,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Freelancer Portfolio Site — Clients Khud Approach Karte Hain",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 59,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "Automated Reports — Har Subah Inbox Mein Ready",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 60,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Website Analytics — Kaise Pata Karein Kya Kaam Kar Raha",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 61,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "88% Enterprises AI Use Karti Hain — Tum Kyun Nahi?",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 62,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "☕ Coffee Shop Menu Card Redesign — Premium Feel",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 63,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Client Se Pehli Meeting Kaise Hoti Hai — Process Dikhata Hoon",
+    "pillar": "CONNECT"
+  },
+  {
+    "dayNumber": 64,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "Feedback Collection Automation — Reviews Apne Aap Aate Hain",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 65,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "School Website Se Admissions 2x — Online Forms Ka Power",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 66,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "AI Voice Agent — Phone Calls Answer Karta Hai 24/7",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 67,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Website Security Basics — SSL Aur HTTPS Kyun Zaroori",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 68,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "Ek Agency Ne 5 Employees Ka Kaam 1 AI Se Replace Kiya",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 69,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "💇 Spa Branding — Relaxation Feel Kaise Design Karein",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 70,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Myth: AI Content Sab Same Lagta Hai — Wrong Approach",
+    "pillar": "MYTH"
+  },
+  {
+    "dayNumber": 71,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "Inventory Management Automation — Stock Kabhi Out Nahi",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 72,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "NGO Website Se Donations 4x — Trust Building Design",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 73,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "Multi-Channel Support — WhatsApp + Email + Instagram Ek System",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 74,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Blog Section Website Mein Kyun Zaroori — SEO Benefits",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 75,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "62% Leaders Kehte Hain AI Ke Bina 3 Saal Mein Out",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 76,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "🦷 Orthodontist Clinic — Patient Trust Build Through Design",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 77,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Tools Jo Main Daily Use Karta Hoon — My Tech Stack",
+    "pillar": "CONNECT"
+  },
+  {
+    "dayNumber": 78,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "Email Marketing Automation — Drip Campaigns Kaise Kaam Karti",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 79,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "Event Management Website — Registrations Automate",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 80,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "Chatbot Training — Tumhare Business Ki Language Seekhta Hai",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 81,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Website Redesign Checklist — Kab Aur Kyun Update Karein",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 82,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "Customer Retention 40% Badhi — Follow-Up Automation Se",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 83,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "🍔 Restaurant Menu Board Redesign — Customers Notice Karte Hain",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 84,
+    "dayOfWeek": "Sunday",
+    "service": "Flexible",
+    "topic": "Myth: Freelancers Premium Charge Nahi Kar Sakte — Reality",
+    "pillar": "MYTH"
+  },
+  {
+    "dayNumber": 85,
+    "dayOfWeek": "Monday",
+    "service": "AI Automation",
+    "topic": "AI Ke Bina Business Chalana = Cycle Se Highway Pe Jaana",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 86,
+    "dayOfWeek": "Tuesday",
+    "service": "Web Design",
+    "topic": "SaaS Product Landing Page — Signups Kaise Badhayein",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 87,
+    "dayOfWeek": "Wednesday",
+    "service": "AI Automation",
+    "topic": "Smart Notification System — Right Time Pe Right Message",
+    "pillar": "SHOW"
+  },
+  {
+    "dayNumber": 88,
+    "dayOfWeek": "Thursday",
+    "service": "Web Design",
+    "topic": "Multilingual Website — Hindi + English = 2x Audience",
+    "pillar": "TEACH"
+  },
+  {
+    "dayNumber": 89,
+    "dayOfWeek": "Friday",
+    "service": "AI Automation",
+    "topic": "First 30 Days of Automation — Kya Hota Hai Step by Step",
+    "pillar": "PROVE"
+  },
+  {
+    "dayNumber": 90,
+    "dayOfWeek": "Saturday",
+    "service": "Graphics Design",
+    "topic": "🏋️ CrossFit Gym — Energetic Brand Identity Design",
+    "pillar": "PROVE"
+  }
+]

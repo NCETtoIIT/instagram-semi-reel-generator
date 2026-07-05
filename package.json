@@ -1,0 +1,21 @@
+{
+  "name": "instagram-reel-generator-plan-b",
+  "version": "1.0.0",
+  "description": "Semi-automated Instagram Reel Generator using Gemini and Imagen 3",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/index.ts",
+    "dev": "tsx src/index.ts",
+    "mock": "tsx src/testMock.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.10.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}
