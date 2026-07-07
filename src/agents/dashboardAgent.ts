@@ -25,7 +25,7 @@ export async function runDashboardAgent(data: DashboardData): Promise<string> {
     const camera = imgResult?.camera || 'Slow zoom in';
     const motion = imgResult?.motion || scene.mood;
 
-    const fullImagePrompt = `Generate a vertical 9:16 aspect ratio image (1080x1920px). Scene: ${scene.visual}. Visual Style Rules: Dark mode theme with pure dark background (#0A0A0A), electric blue (#00D4FF) and purple (#7B2FFF) neon ambient accents. Modern 3D elements, sleek glassmorphism dashboard UI. Premium cinematic lighting, photorealistic high-quality detail.`;
+    const fullImagePrompt = `${scene.visual}. QUALITY: High-resolution, vivid colors, clean composition, professional social media content quality, vertical 9:16 format (1080x1920px). Include hand-drawn doodle elements (sparkles, arrows, exclamation marks). Instagram handle '@ravi.digital.solutions' semi-transparent at bottom-left.`;
 
     const imageTag = imagePath
       ? `<img src="${imagePath}" alt="Scene ${scene.sceneNumber} Preview">`
